@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/eolinker/apinto/drivers/ai-provider/google"
+	"github.com/eolinker/apinto/drivers/ai-provider/moonshot"
 	"github.com/eolinker/apinto/drivers/ai-provider/openAI"
 	"github.com/eolinker/apinto/drivers/certs"
 	"github.com/eolinker/apinto/drivers/discovery/consul"
@@ -88,4 +89,5 @@ func driverRegister(extenderRegister eosc.IExtenderDriverRegister) {
 	// AI供应商
 	openAI.Register(extenderRegister)
 	google.Register(extenderRegister)
+	moonshot.Register(extenderRegister)
 }
