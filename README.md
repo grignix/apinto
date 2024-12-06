@@ -55,33 +55,33 @@ Apinto网关不受云平台限制，也能在Kubernetes运行。
 
 | 功能         | 描述                                                         |
 | ------------ | ------------------------------------------------------------ |
-| 集群     | 集群不限制网关节点，自由剔除或加入网关节点，主从网关节点具备无缝切换功能，提升网关高可用性 |
-| 动态路由     | 可通过设置location、query、header、host、method等参数匹配对应的服务 |
-| 服务发现     | 支持对接Eureka、Nacos、Consul                                |
-| 负载均衡     | 支持轮询权重算法                                             |
-| 用户鉴权     | 匿名、Basic、Apikey、JWT、AK/SK认证                          |
-| SSL证书      | 管理多个证书                                                 |
-| 访问域名     | 可为网关设置访问域名                                         |
-| 健康检查     | 支持对负载的节点进行健康检查，确保服务健壮性                 |
-| 协议         | HTTP/HTTPS、Webservice、Restful、gRPC、Dubbo2、SOAP                              |
-| 插件化       | 流程插件化，按需加载所需模块                                 |
-| OPEN API     | 支持使用open api配置网关                                     |
-| 日志         | 提供节点的运行日志，可根据日志设置的等级输出                 |
-| 多种日志输出 | 可将节点的请求日志输出到不同的日志接收器，如file、nsq、kafka等 |
-| Cli命令支持  | 通过Cli命令操控网关，插件安装、下载和网关的开启、关闭等操作均可使用一键命令操控 |
-| 黑白名单     | 支持多维度筛选流量，设置黑白名单IP，拦截非法IP                               |
-| 访问策略     | 支持多维度筛选流量，可针对应用、IP、应用与IP、应用与API、应用与上游等多维组合设置黑白名单                               |
-| 流量策略     | 支持多维度筛选流量，控制应用、应用与API、应用与上游之间的请求次数和请求报文大小限制                               |
-| 熔断策略     | 支持多维度筛选流量，熔断上游或API                               |
-| 灰度策略     | 支持多维度筛选流量，按百分比或高级规则灰度流量到目标节点                               |
-| 缓存策略     | 支持多维度筛选流量，缓存API响应内容                               |
-| 参数映射     | 将客户端的请求参数映射到转发请求中，可按需改变参数的位置及名称 |
-| 额外参数     | 转发请求时，额外加上后端验证参数，如apikey等                 |
-| 转发重写     | 支持对 `scheme`、`uri`、`host` 的重写，同时支持对转发请求的请求头部header的值进行新增或者删除 |
-| 流量镜像     | 线上流量或请求内容进行拷贝到镜像服务中                 |
-| MOCK     | 模拟web服务器端API的响应                 |
-| CORS     | 支持api请求跨域                |
-| 同步API     | 提供OpenAPI同步API文档，支持swagger3.0 json或yaml格式文件      |
+| Cluster | The cluster does not limit the gateway nodes, and the gateway nodes can be removed or added freely. The master and slave gateway nodes have seamless switching functions to improve the high availability of the gateway |
+| Dynamic routing | You can match the corresponding service by setting parameters such as location, query, header, host, method, etc. |
+| Service discovery | Supports docking with Eureka, Nacos, and Consul |
+| Load balancing | Supports polling weight algorithm |
+| User authentication | Anonymous, Basic, Apikey, JWT, AK/SK authentication |
+| SSL certificate | Manage multiple certificates |
+| Access domain name | You can set the access domain name for the gateway |
+| Health check | Support health checks on the nodes of the load to ensure the robustness of the service |
+| Protocol | HTTP/HTTPS, Webservice, Restful, gRPC, Dubbo2, SOAP |
+| Plug-in | Process plug-in, load required modules on demand |
+| OPEN API | Support the use of open api configures gateway |
+| Log | Provides node operation logs, which can be output according to the level of log settings |
+| Multiple log outputs | Node request logs can be output to different log receivers, such as file, nsq, kafka, etc. |
+| Cli command support | Control the gateway through Cli commands, and operations such as plug-in installation, download, and gateway opening and closing can all be controlled with one-click commands |
+| Blacklist and whitelist | Support multi-dimensional traffic filtering, set blacklist and whitelist IPs, and intercept illegal IPs |
+| Access policy | Support multi-dimensional traffic filtering, and set blacklist and whitelist for multi-dimensional combinations such as application, IP, application and IP, application and API, application and upstream |
+| Traffic policy | Support multi-dimensional traffic filtering, control the number of requests and request message size limits between applications, applications and APIs, and applications and upstreams |
+| Circuit breaker policy | Support multi-dimensional traffic filtering, circuit breaker upstream or API |
+| Grayscale policy | Support multi-dimensional traffic filtering, grayscale traffic to target nodes by percentage or advanced rules |
+| Cache policy | Support multi-dimensional traffic filtering, cache API response content |
+| Parameter Mapping | Map the client's request parameters to the forwarding request, and change the position and name of the parameters as needed |
+| Additional Parameters | When forwarding a request, add additional backend verification parameters, such as apikey, etc. |
+| Forward Rewrite | Supports rewriting of `scheme`, `uri`, and `host`, and supports adding or deleting the value of the request header of the forwarded request |
+| Traffic Mirroring | Copy online traffic or request content to the mirror service |
+| MOCK | Simulate the response of the web server-side API |
+| CORS | Support cross-domain API requests |
+| Synchronous API | Provide OpenAPI synchronous API documents, support swagger3.0 json or yaml format files |
 
 ## 迭代计划
 ![image](https://user-images.githubusercontent.com/18322454/226301243-d69a1a5e-22eb-48d4-8fd1-52ec1cf8237b.png)
